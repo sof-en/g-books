@@ -3,15 +3,15 @@ import { ResultData } from "../../model";
 
 export const SharedCart: FC<ResultData> = (props) => {
   const {
-    id,
-    title,
-    authors,
-    translators,
-    subjects,
-    bookshelves,
-    languages,
-    copyright,
-    media_type,
+    // id,
+    // title,
+    // authors,
+    // translators,
+    // subjects,
+    // bookshelves,
+    // languages,
+    // copyright,
+    // media_type,
     formats,
     download_count,
   } = props;
