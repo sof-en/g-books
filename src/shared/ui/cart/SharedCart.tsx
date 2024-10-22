@@ -5,7 +5,7 @@ export const SharedCart: FC<ResultData> = (props) => {
   const {
     // id,
     // title,
-    // authors,
+    authors,
     // translators,
     // subjects,
     // bookshelves,
