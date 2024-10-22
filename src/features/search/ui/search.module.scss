@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  align-items: center;
+  border: 1px solid silver;
+  border-radius: 15px;
+  padding: 1px;
+  gap: 5px;
+  .input {
+    border: none;
+    background: none;
+    transition: all 0.3s;
+    &:focus {
+      outline: none; /* убираем стандартную подсветку */
+      box-shadow: none; /* убираем тень при фокусе */
+      border-color: #000; /* задаем цвет границы при фокусе */
+    }
+  }
+  
+  .btn{
+    background: none;
+    padding: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover, &:focus, &:active{
+        outline: none !important;
+        box-shadow: none !important;
+        border-color:#222;
+        background: none !important;
+        .icon{
+            color: mediumslateblue;
+        }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../shared/color.scss";
+
+.btn{
+    background: none !important;
+    border: none;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    color: var(--black) !important;
+    &:hover, &:active{
+        background: none !important;
+        border: none !important;
+    }
+    
+    .icon{
+        font-size: 18px;
+        color: mediumslateblue;
+        &:hover{
+            opacity: 0.4;
+        }
+    }
+    .text{
+        top: -10px;
+        right: -10px;
+        color: mediumslateblue;
+        opacity: 0.7;
+        position: absolute;
+    }
+}

@@ -1,0 +1,18 @@
+.swiperContainer{
+  padding: 20px 40px;  
+}
+:global {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 20px;  // Размер кнопок
+    height: 20px; // Размер кнопок
+  }
+
+  .swiper-button-next {
+    right: 5px; // Отступ справа
+  }
+
+  .swiper-button-prev {
+    left: 5px; // Отступ слева
+  }
+}

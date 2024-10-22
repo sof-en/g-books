@@ -1,0 +1,70 @@
+.carousel {
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .slick-prev {
+    left: -60px;
+  }
+
+  .slick-next {
+    right: -60px;
+  }
+
+  .bannerSlide {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bannerContent {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .btn{
+        padding: 20px 20px;
+        
+        border-radius: 5px;
+        font-size: 16px;
+        background: #1890ff;
+        color: white;
+      }
+    }
+
+    .textContent {
+      color: white;
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+      
+      h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+:root {
+  --black: "#222";
+  --white-gray: "#dfdfe3";
+  --medium-slate-blue: "mediumslateblue";
+  --gray: "#6b7280";
+  --white: "#fff";
+}
+
+html [data-theme="dark"] {
+  --black: "white";
+  --white-gray: "black";
+  --medium-slate-blue: "white";
+  --gray: "white";
+}
+
+html [data-theme="light"] {
+  --black: "black";
+  --white-gray: "white";
+  --medium-slate-blue: "black";
+  --gray: "black";
+}
