@@ -1,12 +1,11 @@
 import { FC } from "react";
 import { Skeleton } from "antd"; // Используем Skeleton из Ant Design
-import { SwiperSlide } from "swiper/react";
 
 export const SharedCartSkeleton: FC = () => {
   return (
-    <>
+    <div className="flex items-center  gap-3">
       {Array.from({ length: 3 }).map((_, index) => (
-        <SwiperSlide
+        <div
           key={index}
           className="w-[100%] flex flex-col gap-3 bg-whiteGray rounded-[10px] p-[10px]"
         >
@@ -16,8 +15,8 @@ export const SharedCartSkeleton: FC = () => {
           />
           <Skeleton active={true} title={false} paragraph={{ rows: 2 }} />
           <Skeleton.Button active={true} style={{ width: "50px" }} />
-        </SwiperSlide>
+        </div>
       ))}
-    </>
+    </div>
   );
 };

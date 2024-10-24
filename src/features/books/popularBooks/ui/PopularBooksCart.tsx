@@ -20,7 +20,6 @@ export const PopularBooksCart: FC = () => {
       getPopularBooks(data.results);
     }
   }, [data?.results, getPopularBooks]);
-  console.log(<SharedCartSkeleton/>)
   return (
     <>
       <SharedSlider>
