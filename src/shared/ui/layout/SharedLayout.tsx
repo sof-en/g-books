@@ -20,16 +20,16 @@ type Props = {
 
 export const SharedLayout: React.FC<Props> = ({ content, header }) => {
   return (
-    <div className=" w-full mx-auto">
+    <div className="bg-green w-full mx-auto px-[10px] ">
       {/* Header */}
-      <div className=" sticky top-0 w-[full] z-50  bg-white py-[20px]">
-        <div className="w-[80%] mx-auto rounded-[10px] px-[30px] py-[20px] shadow-whiteGray shadow-md  bg-whiteGray flex justify-between">
+      <div className=" sticky top-0 w-[full] z-50  bg-green py-[20px]">
+        <div className="lg:w-[80%] md:w-[90%] sm:w-[95%]  mx-auto rounded-[5px] px-[30px] py-[20px]   bg-whiteGray flex justify-between">
           {header}
         </div>
       </div>
 
       {/* Content */}
-      <div className=" w-[80%] mx-auto">
+      <div className=" lg:w-[80%] md:w-[90%] sm:w-[95%]    mx-auto">
         {content?.slide_banner}
         {content?.top_books}
         {content?.sound_books}

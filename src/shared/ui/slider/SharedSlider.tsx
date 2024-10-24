@@ -14,7 +14,7 @@ interface SharedSliderProps {
 export const SharedSlider: FC<SharedSliderProps> = ({ children }) => {
   return (
     <Swiper
-      className={style.swiperContainer}
+      className={`${style.swiperContainer}`}
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={20}
       breakpoints={{
