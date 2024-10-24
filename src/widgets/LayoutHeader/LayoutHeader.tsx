@@ -3,13 +3,14 @@ import scss from "./layoutHeader.module.scss";
 import { Logo } from "../../shared/ui";
 import { Language, Search } from "../../features";
 
-
 export const LayoutHeader: FC = () => {
   return (
     <div className={scss.layout_header}>
-        <Logo/>
-        <Search/>
-        <Language/>
+      <Logo />
+      <Search />
+      <div>
+        <Language />
+      </div>
     </div>
   );
 };

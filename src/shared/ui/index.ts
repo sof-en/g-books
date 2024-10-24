@@ -6,4 +6,6 @@ export { Logo } from "./Logo/Logo";
 export { SharedCart } from "./cart/SharedCart";
 export { SharedSlider } from "./slider/SharedSlider";
 export { LayoutBooksContent } from "./LayoutBooksContent/LayoutBooksContent";
-export {SoundBookCart} from "./cart/SoundBookCart"
+export { SoundBookCart } from "./cart/SoundBookCart";
+export { SharedCartSkeleton } from "./skeleton/SharedSkeleton";
+export {SoundBookSkeleton} from "./skeleton/SharedSoundSkeleton";

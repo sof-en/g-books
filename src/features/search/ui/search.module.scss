@@ -1,8 +1,9 @@
 .form {
   display: flex;
   align-items: center;
-  border: 1px solid silver;
-  border-radius: 15px;
+  // border: 1px solid silver;
+  border-bottom: 1px solid silver;
+  // border-radius: 15px;
   padding: 1px;
   gap: 5px;
   .input {

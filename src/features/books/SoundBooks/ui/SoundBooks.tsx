@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { useAction, useTypedSelector } from "../../../../shared/model";
 import { useGetSoundBooksQuery } from "../../../../entities";
-import { SharedSlider, SoundBookCart } from "../../../../shared/ui";
+import { SharedSlider, SoundBookCart, SoundBookSkeleton } from "../../../../shared/ui";
 import { SwiperSlide } from "swiper/react";
 import { Button, Spin } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
@@ -35,7 +35,7 @@ export const SoundBooks: FC = () => {
               item={item}
             />
           </SwiperSlide>
-        ))) :<Spin style={{ width: "100%", textAlign:"center" }}  size="large"/>}
+        ))) :<SoundBookSkeleton/>}
       </SharedSlider>
 
       {/* Float Button для остановки воспроизведения */}

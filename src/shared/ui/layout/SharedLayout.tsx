@@ -1,3 +1,4 @@
+
 interface IMenu {
   key: string;
   icon: React.ReactNode;
@@ -21,20 +22,22 @@ type Props = {
 export const SharedLayout: React.FC<Props> = ({ content, header }) => {
   return (
     <div className="bg-green w-full mx-auto px-[10px] ">
-      {/* Header */}
-      <div className=" sticky top-0 w-[full] z-50  bg-green py-[20px]">
-        <div className="lg:w-[80%] md:w-[90%] sm:w-[95%]  mx-auto rounded-[5px] px-[30px] py-[20px]   bg-whiteGray flex justify-between">
-          {header}
+      {/* <Watermark content="e-books" > */}
+        {/* Header */}
+        <div className=" sticky top-0 w-[full] z-50  bg-green py-[20px]">
+          <div className="lg:w-[80%] md:w-[90%] sm:w-[95%]  mx-auto rounded-[5px] px-[30px] py-[20px]   bg-whiteGray flex justify-between">
+            {header}
+          </div>
         </div>
-      </div>
 
-      {/* Content */}
-      <div className=" lg:w-[80%] md:w-[90%] sm:w-[95%]    mx-auto">
-        {content?.slide_banner}
-        {content?.top_books}
-        {content?.sound_books}
-        {content?.for_child}
-      </div>
+        {/* Content */}
+        <div className=" lg:w-[80%] md:w-[90%] sm:w-[95%]    mx-auto">
+          {content?.slide_banner}
+          {content?.top_books}
+          {content?.sound_books}
+          {content?.for_child}
+        </div>
+      {/* </Watermark> */}
     </div>
   );
 };

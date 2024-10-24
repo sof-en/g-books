@@ -1,9 +1,12 @@
 import { FC, useEffect } from "react";
 import { useAction, useTypedSelector } from "../../../shared/model";
 import { useGetChildBooksQuery } from "../../../entities";
-import { SharedCart, SharedSlider } from "../../../shared/ui";
+import {
+  SharedCart,
+  SharedCartSkeleton,
+  SharedSlider,
+} from "../../../shared/ui";
 import { SwiperSlide } from "swiper/react";
-import { Spin } from "antd";
 
 export const ForChild: FC = () => {
   const childBooks = useTypedSelector(
@@ -19,7 +22,7 @@ export const ForChild: FC = () => {
   return (
     <SharedSlider>
       {isLoading ? (
-        <Spin style={{ width: "100%", textAlign: "center" }} size="large" />
+        <SharedCartSkeleton />
       ) : (
         childBooks.map((item) => (
           <SwiperSlide key={item.id}>

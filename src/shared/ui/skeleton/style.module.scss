@@ -1,0 +1,66 @@
+.audioPlayerContainer {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    .info{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 10px;
+      p{
+        color: #1890ff;
+        display: flex;
+        align-items: center;
+      }
+      .authors{
+        display: flex;
+        gap: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+  
+  .player{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // margin-bottom: auto;
+    .playButton {
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      font-size: 24px;
+    
+      svg {
+        font-size: 32px; /* Увеличиваем размер иконки */
+      }
+    }
+    
+    .progressSlider {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    
+      .ant-slider-track {
+        background-color: #1890ff;
+      }
+    
+      .ant-slider-handle {
+        border-color: #1890ff;
+        transition: transform 0.3s ease;
+    
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    
+  }
