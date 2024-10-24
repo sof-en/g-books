@@ -3,7 +3,7 @@ import { useAction, useTypedSelector } from "../../../../shared/model";
 import { useGetSoundBooksQuery } from "../../../../entities";
 import { SharedSlider, SoundBookCart, SoundBookSkeleton } from "../../../../shared/ui";
 import { SwiperSlide } from "swiper/react";
-import { Button, Spin } from "antd";
+import { Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 
 export const SoundBooks: FC = () => {
