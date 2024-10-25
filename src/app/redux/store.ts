@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { api } from "../../shared/api";
 import storage from "redux-persist/lib/storage";
-import {  booksSlice, SavedBooksSlice } from "../../entities";
+import {  booksSlice, FavoritesBooksSlice, SavedBooksSlice } from "../../entities";
 import {
   persistReducer,
   persistStore,
@@ -17,12 +17,13 @@ const rootReducer = combineReducers({
   [api.reducerPath]: api.reducer,
   [SavedBooksSlice.name]: SavedBooksSlice.reducer,
   [booksSlice.name]: booksSlice.reducer,
+  [FavoritesBooksSlice.name]: FavoritesBooksSlice.reducer,
 });
 
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: [SavedBooksSlice.name],
+  whitelist: [SavedBooksSlice.name, FavoritesBooksSlice.name],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

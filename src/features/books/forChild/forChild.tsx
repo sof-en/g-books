@@ -1,8 +1,7 @@
 import { FC, useEffect } from "react";
 import { useAction, useTypedSelector } from "../../../shared/model";
-import { useGetChildBooksQuery } from "../../../entities";
+import { BookCart, useGetChildBooksQuery } from "../../../entities";
 import {
-  SharedCart,
   SharedCartSkeleton,
   SharedSlider,
 } from "../../../shared/ui";
@@ -26,7 +25,7 @@ export const ForChild: FC = () => {
       ) : (
         childBooks.map((item) => (
           <SwiperSlide key={item.id}>
-            <SharedCart {...item} />
+            <BookCart {...item} />
           </SwiperSlide>
         ))
       )}

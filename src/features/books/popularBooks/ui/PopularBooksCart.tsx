@@ -1,11 +1,7 @@
 import { FC, useEffect } from "react";
 import { useAction, useTypedSelector } from "../../../../shared/model";
-import {
-  SharedCart,
-  SharedCartSkeleton,
-  SharedSlider,
-} from "../../../../shared/ui";
-import { useGetPopularBooksQuery } from "../../../../entities";
+import { SharedCartSkeleton, SharedSlider } from "../../../../shared/ui";
+import { BookCart, useGetPopularBooksQuery } from "../../../../entities";
 import { SwiperSlide } from "swiper/react";
 
 export const PopularBooksCart: FC = () => {
@@ -28,7 +24,7 @@ export const PopularBooksCart: FC = () => {
         ) : (
           popularBooksData.map((item) => (
             <SwiperSlide key={item.id}>
-              <SharedCart {...item} />
+              <BookCart {...item} />
             </SwiperSlide>
           ))
         )}
