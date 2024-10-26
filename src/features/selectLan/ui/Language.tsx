@@ -24,9 +24,8 @@ export const Language: FC = () => {
 
   const onChange: MenuProps["onClick"] = (value) => {
     i18n.changeLanguage(value.key);
-    console.log(value.key);
+
   }
-  console.log("rednder Language");
   const getCurrentLanguage = i18n.language;
   const getCurrentLanguageLabel = () => {
     switch (getCurrentLanguage) {
