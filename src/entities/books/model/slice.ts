@@ -5,7 +5,7 @@ export interface BookI {
   booksData: ResultData[];
   popularBooksData: ResultData[];
   soundbooks: ResultData[];
-  active_audio: string | number;
+  active_audio: string | number | null;
   for_child_books_data: ResultData[];
 }
 
@@ -13,7 +13,7 @@ const initialState: BookI = {
   booksData: [],
   popularBooksData: [],
   soundbooks: [],
-  active_audio: "",
+  active_audio: null,
   for_child_books_data: [],
 };
 
@@ -30,7 +30,7 @@ export const booksSlice = createSlice({
     getSoundBooks: (state, action: PayloadAction<ResultData[]>) => {
       state.soundbooks = action.payload;
     },
-    setActiveAudio: (state, action: PayloadAction<string | number>) => {
+    setActiveAudio: (state, action: PayloadAction<string | number | null>) => {
       state.active_audio = action.payload;
     },
     getChildBooks: (state, action: PayloadAction<ResultData[]>) => {

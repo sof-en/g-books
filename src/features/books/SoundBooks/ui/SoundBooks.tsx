@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import { useAction, useTypedSelector } from "../../../../shared/model";
 import { AboutBtn, SaveBtn, useGetSoundBooksQuery } from "../../../../entities";
 import { SharedSlider, SoundBookCart, SoundBookSkeleton } from "../../../../shared/ui";
@@ -7,9 +7,9 @@ import { Button } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 
 export const SoundBooks: FC = () => {
-  const soundbooks = useTypedSelector((state) => state.books.soundbooks);
+  const {soundbooks, active_audio: activeAudioId} = useTypedSelector((state) => state.books);
   const { data, isLoading } = useGetSoundBooksQuery();
-  const { getSoundBooks } = useAction();
+  const { getSoundBooks, setActiveAudio } = useAction();
   // Сохранение аудиокниг
   useEffect(() => {
     if (data?.results) {
@@ -17,11 +17,10 @@ export const SoundBooks: FC = () => {
     }
   }, [data?.results, getSoundBooks]);
 
-  const [activeAudioId, setActiveAudioId] = useState<string | number | null>(null);
-
+  // const [activeAudioId, setActiveAudioId] = useState<string | number | null>(null);
   // Функция для остановки всех аудиокниг
   const stopAllAudio = () => {
-    setActiveAudioId(null);
+    setActiveAudio(null);
   };
  
   return (
@@ -31,7 +30,7 @@ export const SoundBooks: FC = () => {
           <SwiperSlide key={item.id}>
             <SoundBookCart
               isPlaying={activeAudioId === item.id}
-              setActiveAudio={setActiveAudioId}
+              setActiveAudio={setActiveAudio}
               item={item}
               saveBtn={<SaveBtn  book={item}/>}
               aboutBtn={<AboutBtn data={item} />}

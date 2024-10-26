@@ -6,7 +6,7 @@ import { PauseCircleOutlined, PlayCircleOutlined } from "@ant-design/icons";
 
 interface Props {
   isPlaying: boolean;
-  setActiveAudio: (id: number | string) => void;
+  setActiveAudio: (id: number | string | null) => void;
   item: ResultData;
   saveBtn?: React.ReactNode;
   aboutBtn?: React.ReactNode;
@@ -30,7 +30,7 @@ export const SoundBookCart: FC<Props> = ({
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
-        setActiveAudio(""); // Остановить воспроизведение
+        setActiveAudio(null); // Остановить воспроизведение
       } else {
         audioRef.current.play();
         setActiveAudio(item.id); // Начать воспроизведение

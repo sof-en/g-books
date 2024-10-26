@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { FcAbout } from "react-icons/fc";
-import { ResultData } from "../../../shared/model";
+import { ResultData, useAction } from "../../../shared/model";
 import { SharedDrawer, SoundBookCart } from "../../../shared/ui";
 import { Link } from "react-router-dom";
 
@@ -8,16 +8,21 @@ export const AboutBtn: FC<{ className?: string; data: ResultData }> = ({
   className,
   data,
 }) => {
+ const {setActiveAudio} = useAction()
   const [activeAudioId, setActiveAudioId] = useState<string | number | null>(
     null
   );
+
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
+    setActiveAudioId(null)
+    setActiveAudio(null)
   };
   const onClose = () => {
     setOpen(false);
     setActiveAudioId(null);
+    setActiveAudio(null)
   };
 
   return (
@@ -74,10 +79,9 @@ export const AboutBtn: FC<{ className?: string; data: ResultData }> = ({
               {data.formats["audio/mp4"] ? (
                 <SoundBookCart
                   item={data}
-                  isPlaying={activeAudioId == data.id}
+                  isPlaying={activeAudioId === data.id}
                   setActiveAudio={setActiveAudioId}
-                  isTitle={false}
-                />
+                  isTitle={false}                 />
               ) : (
                 <span> озвучки отсутствуют </span>
               )}
