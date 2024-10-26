@@ -46,7 +46,7 @@ export const BookCart: FC<ResultData> = (props) => {
         className={`absolute flex items-center gap-3 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ${style.iconContainer}`}
       >
         <SaveBtn className={style.bg} book={props} />
-        <AboutBtn className={style.bg} />
+        <AboutBtn className={style.bg} data={props} />
       </div>
     </div>
   );

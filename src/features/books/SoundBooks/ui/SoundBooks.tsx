@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { useAction, useTypedSelector } from "../../../../shared/model";
-import { useGetSoundBooksQuery } from "../../../../entities";
+import { AboutBtn, SaveBtn, useGetSoundBooksQuery } from "../../../../entities";
 import { SharedSlider, SoundBookCart, SoundBookSkeleton } from "../../../../shared/ui";
 import { SwiperSlide } from "swiper/react";
 import { Button } from "antd";
@@ -33,6 +33,8 @@ export const SoundBooks: FC = () => {
               isPlaying={activeAudioId === item.id}
               setActiveAudio={setActiveAudioId}
               item={item}
+              saveBtn={<SaveBtn  book={item}/>}
+              aboutBtn={<AboutBtn data={item} />}
             />
           </SwiperSlide>
         ))) :<SoundBookSkeleton/>}

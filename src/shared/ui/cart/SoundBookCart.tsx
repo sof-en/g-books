@@ -8,9 +8,19 @@ interface Props {
   isPlaying: boolean;
   setActiveAudio: (id: number | string) => void;
   item: ResultData;
+  saveBtn?: React.ReactNode;
+  aboutBtn?: React.ReactNode;
+  isTitle?: boolean;
 }
 
-export const SoundBookCart: FC<Props> = ({ isPlaying, setActiveAudio, item }) => {
+export const SoundBookCart: FC<Props> = ({
+  isPlaying,
+  setActiveAudio,
+  item,
+  saveBtn,
+  aboutBtn,
+  isTitle=true,
+}) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -59,12 +69,16 @@ export const SoundBookCart: FC<Props> = ({ isPlaying, setActiveAudio, item }) =>
   return (
     <div className={styles.audioPlayerContainer}>
       <div className={styles.info}>
-        <p>{item.title}</p>
-        <div className={styles.authors}>
-          {item.authors.map((author, index) => (
-            <span key={index}>{author.name}</span>
-          ))}
-        </div>
+        {isTitle && (
+          <>
+            <p>{item.title}</p>
+            <div className={styles.authors}>
+              {item.authors.map((author, index) => (
+                <span key={index}>{author.name}</span>
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       <div className={styles.player}>
@@ -85,7 +99,12 @@ export const SoundBookCart: FC<Props> = ({ isPlaying, setActiveAudio, item }) =>
 
         <Slider value={progress} onChange={onSliderChange} />
       </div>
-      <span>{parseInt(currentTime.toFixed(0))}c</span>
+      <div className="flex items-center justify-between">
+        <span>{parseInt(currentTime.toFixed(0))}c</span>
+        <div className="flex items-center">
+          {saveBtn} {aboutBtn}{" "}
+        </div>
+      </div>
     </div>
   );
 };
