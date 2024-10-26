@@ -8,16 +8,17 @@ export const AboutBtn: FC<{ className?: string; data: ResultData }> = ({
   className,
   data,
 }) => {
+  const [activeAudioId, setActiveAudioId] = useState<string | number | null>(
+    null
+  );
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
+    setActiveAudioId(null);
   };
-  const [activeAudioId, setActiveAudioId] = useState<string | number | null>(
-    null
-  );
 
   return (
     <>
