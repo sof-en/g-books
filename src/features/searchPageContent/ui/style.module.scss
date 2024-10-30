@@ -1,0 +1,75 @@
+.content {
+  width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  .filtersContainer {
+    gap: 15px;
+    .header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+    .searchBar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .input {
+      flex: 1;
+    }
+
+    .searchButton {
+      display: flex;
+      align-items: center;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .filter {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .select {
+      width: 100%;
+    }
+
+    .slider {
+      margin-top: 10px;
+    }
+    .yearInputContainer {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .yearInput {
+        width: 70px;
+    }
+}
+
+    .results {
+      min-height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+     
+    }
+}

@@ -4,3 +4,4 @@ export {PopularBooksCart} from "./books/popularBooks/ui/PopularBooksCart";
 export {SoundBooks} from "./books/SoundBooks/ui/SoundBooks";
 export {ForChild} from "./books/forChild/forChild";
 export {Save} from "./books/save/Save"
+export {SearchLog} from "./searchPageContent/ui/SearchLog"

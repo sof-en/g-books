@@ -25,7 +25,7 @@ export const BannerSlide: FC = () => {
     <Carousel
       autoplay
       arrows
-      className={scss.carousel}
+      className={`${scss.carousel}`}
     >
       {banners.map((banner) => (
         <div key={banner.id} className={scss.bannerSlide}>

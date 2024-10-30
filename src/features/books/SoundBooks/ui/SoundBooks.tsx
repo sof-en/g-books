@@ -1,6 +1,5 @@
 import { FC, useEffect } from "react";
-import { useAction, useTypedSelector } from "../../../../shared/model";
-import { AboutBtn, SaveBtn, useGetSoundBooksQuery } from "../../../../entities";
+import { AboutBtn, SaveBtn, useAction, useGetSoundBooksQuery, useTypedSelector } from "../../../../entities";
 import { SharedSlider, SoundBookCart, SoundBookSkeleton } from "../../../../shared/ui";
 import { SwiperSlide } from "swiper/react";
 import { Button } from "antd";

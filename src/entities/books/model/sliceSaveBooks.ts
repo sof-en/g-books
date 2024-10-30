@@ -3,7 +3,7 @@ import { ResultData } from "../../../shared/model";
 
 export interface FavoritesBooksState {
   favBooks: ResultData[];
-  FavoriteBooksId: (number | string)[];
+  FavoriteBooksId: (number | string | null)[];
 }
 
 const initialState: FavoritesBooksState = {
@@ -23,10 +23,10 @@ export const FavoritesBooksSlice = createSlice({
     },
     deleteFavBooks: (state, action: PayloadAction<ResultData>) => {
       state.favBooks = state.favBooks.filter(
-        (item) => item.id !== action.payload.id
+        (item) => item.id != action.payload.id
       );
       state.FavoriteBooksId = state.FavoriteBooksId.filter(
-        (item) => item !== action.payload.id
+        (item) => item != action.payload.id
       );
     },
   },

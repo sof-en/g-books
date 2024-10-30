@@ -1,8 +1,10 @@
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { FC } from "react";
 import { BiBookmark } from "react-icons/bi";
-import { ResultData, useAction, useTypedSelector } from "../../../shared/model";
+import { ResultData } from "../../../shared/model";
 import { message } from "antd";
+import { useAction } from "../../hooks/action";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 
 export const SaveBtn: FC<{ className?: string; book: ResultData }> = ({
   className,

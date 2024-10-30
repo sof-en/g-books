@@ -10,3 +10,5 @@ export * from "./books/model/sliceSaveBooks";
 export { BookCart } from "./books/ui/BookCart";
 export { AboutBtn } from "./books/ui/AboutBtn";
 export { SaveBtn } from "./books/ui/SaveBtn";
+export {useTypedSelector} from "./hooks/useTypedSelector"
+export {useAction} from './hooks/action'

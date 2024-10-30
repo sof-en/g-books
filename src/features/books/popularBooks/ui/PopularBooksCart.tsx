@@ -1,7 +1,6 @@
 import { FC, useEffect } from "react";
-import { useAction, useTypedSelector } from "../../../../shared/model";
 import { SharedCartSkeleton, SharedSlider } from "../../../../shared/ui";
-import { BookCart, useGetPopularBooksQuery } from "../../../../entities";
+import { BookCart, useAction, useGetPopularBooksQuery, useTypedSelector } from "../../../../entities";
 import { SwiperSlide } from "swiper/react";
 
 export const PopularBooksCart: FC = () => {

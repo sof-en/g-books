@@ -4,13 +4,14 @@ import scss from "./search.module.scss";
 import { SearchOutlined } from "@ant-design/icons";
 import { saveBooksActions, useGetSearchMutation } from "../../../entities";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export const Search: FC = () => {
   const [getSearch, { isLoading }] = useGetSearchMutation();
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [messageApi, contextHolder] = message.useMessage();
   const dispatch = useDispatch();
-
+  const navigate = useNavigate()
   const sanitizeInput = (input: string) => {
     return input.replace(/[\s\W_]+/g, "");
   };
@@ -30,6 +31,7 @@ export const Search: FC = () => {
         } else {
           messageApi.success("Success!");
           dispatch(saveBooksActions.saveResultSearch(response.results));
+          navigate("/search", {state: {result: response.results}})
         }
       } catch (err) {
         messageApi.error("Error occurred during search!");

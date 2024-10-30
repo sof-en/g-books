@@ -1,8 +1,9 @@
 import { FC, useState } from "react";
 import { FcAbout } from "react-icons/fc";
-import { ResultData, useAction } from "../../../shared/model";
+import { ResultData } from "../../../shared/model";
 import { SharedDrawer, SoundBookCart } from "../../../shared/ui";
 import { Link } from "react-router-dom";
+import { useAction } from "../../hooks/action";
 
 export const AboutBtn: FC<{ className?: string; data: ResultData }> = ({
   className,

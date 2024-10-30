@@ -1,7 +1,10 @@
-import { FC } from "react"
+import React, { FC } from "react"
+import { SearchPageContent } from "../../widgets"
 
-export const SearchResultPage: FC = () => {
+export const SearchResultPage: FC =React.memo( () => {
   return (
-    <div>SearchResultPage</div>
+    <div>
+      <SearchPageContent/>
+    </div>
   )
-}
+})

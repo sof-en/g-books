@@ -10,7 +10,7 @@ export function LayoutApp() {
         slide_banner: <BannerSlide />,
         top_books: <PopularBooks />,
         sound_books: <SoundBooksLayout/>,
-        for_child: <ForChildLayout/>
+        for_child: <ForChildLayout/>,
       }}
       menu_item={[
         {

@@ -4,8 +4,7 @@ export interface SavedBooksState {
   resultSearchData: ResultData[];
 }
 const initialState: SavedBooksState = {
-  resultSearchData:
-    [] || JSON.parse(localStorage.getItem("persist:root") || ""),
+  resultSearchData: [],
 };
 export const SavedBooksSlice = createSlice({
   name: "saveBooks",

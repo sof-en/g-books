@@ -3,8 +3,8 @@ import { BiBookmark } from "react-icons/bi";
 import { FC, useState } from "react";
 import { SharedDrawer } from "../../../shared/ui";
 import { Badge } from "antd";
-import { useAction, useTypedSelector } from "../../../shared/model";
 import { Link } from "react-router-dom";
+import { useAction, useTypedSelector } from "../../../entities";
 
 export const Save: FC = () => {
   const dataSaveBooks = useTypedSelector(

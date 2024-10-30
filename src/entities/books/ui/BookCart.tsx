@@ -7,7 +7,7 @@ import { AboutBtn } from "./AboutBtn";
 export const BookCart: FC<ResultData> = (props) => {
   const {
     // id,
-    // title,
+    title,
     authors,
     // translators,
     // subjects,
@@ -39,6 +39,7 @@ export const BookCart: FC<ResultData> = (props) => {
         {authors.length > 1 && <span>{authors[1].birth_year}</span>}
         {authors.length > 2 && <span>{authors[2].death_year}</span>}
       </div>
+      <span>{title}</span>
       <span>{download_count}</span>
 
       {/* Контейнер с иконками, которые будут появляться при наведении */}

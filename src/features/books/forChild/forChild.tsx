@@ -1,6 +1,5 @@
 import { FC, useEffect } from "react";
-import { useAction, useTypedSelector } from "../../../shared/model";
-import { BookCart, useGetChildBooksQuery } from "../../../entities";
+import { BookCart, useAction, useGetChildBooksQuery, useTypedSelector } from "../../../entities";
 import {
   SharedCartSkeleton,
   SharedSlider,
