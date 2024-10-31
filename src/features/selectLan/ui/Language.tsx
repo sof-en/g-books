@@ -42,9 +42,9 @@ export const Language: FC = () => {
 
   return (
     <Dropdown menu={{ items, onClick: onChange }} placement="bottomLeft">
-      <Button className={scss.btn}>
-        <GlobalOutlined className={scss.icon} />
-        <span className={scss.text}>{getCurrentLanguageLabel()}</span>
+      <Button className={`${scss.btn} `}>
+        <GlobalOutlined className={`${scss.icon} text-mediumSlateBlue`} />
+        <span className={`${scss.text} text-mediumSlateBlue`}>{getCurrentLanguageLabel()}</span>
       </Button>
     </Dropdown>
   );

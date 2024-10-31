@@ -3,6 +3,7 @@ import { ResultData } from "../../../shared/model";
 import style from "./cart.module.scss";
 import { SaveBtn } from "./SaveBtn";
 import { AboutBtn } from "./AboutBtn";
+import { Skeleton } from "antd";
 
 export const BookCart: FC<ResultData> = (props) => {
   const {
@@ -32,15 +33,15 @@ export const BookCart: FC<ResultData> = (props) => {
           alt="photo authors"
         />
       ) : (
-        <div>No image available</div>
+        <Skeleton.Image   active={true} style={{ width: "100%", height: "300px" }}  />
       )}
       <div>
         {authors.length > 0 && <span>{authors[0].name}</span>}
         {authors.length > 1 && <span>{authors[1].birth_year}</span>}
         {authors.length > 2 && <span>{authors[2].death_year}</span>}
       </div>
-      <span>{title}</span>
-      <span>{download_count}</span>
+      <span className=" overflow-hidden whitespace-nowrap text-ellipsis  ">{title}</span>
+      <span className=" text-[#6b7280]  ">количество скачиваний: {download_count}</span>
 
       {/* Контейнер с иконками, которые будут появляться при наведении */}
       <div

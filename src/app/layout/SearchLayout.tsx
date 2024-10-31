@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { SharedLayout } from "../../shared/ui";
-import { LayoutHeader } from "../../widgets";
+import { Footer, LayoutHeader } from "../../widgets";
 import { SearchResultPage } from "../../pages";
 
 export const SearchLayout: FC = React.memo(() => {
@@ -8,6 +8,7 @@ export const SearchLayout: FC = React.memo(() => {
     <SharedLayout
       header={<LayoutHeader />}
       search_content={<SearchResultPage />}
+      footer={<Footer />}
     />
   );
 });

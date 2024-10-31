@@ -7,7 +7,7 @@ export default {
     colors: {
       black: "#222",
       whiteGray: "#f5f5f5",
-      mediumSlateBlue: "#7b68ee",
+      mediumSlateBlue: "#1890ff",
       gray: "#6b7280",
       white: "#fff",
       green: "#e3e4e4"

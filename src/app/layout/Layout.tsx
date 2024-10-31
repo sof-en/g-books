@@ -1,5 +1,5 @@
 import { SharedLayout } from "../../shared/ui";
-import { BannerSlide, ForChildLayout, LayoutHeader, PopularBooks, SoundBooksLayout } from "../../widgets";
+import { BannerSlide, Footer, ForChildLayout, LayoutHeader, PopularBooks, SoundBooksLayout } from "../../widgets";
 
 export function LayoutApp() {
   return (
@@ -12,6 +12,7 @@ export function LayoutApp() {
         sound_books: <SoundBooksLayout/>,
         for_child: <ForChildLayout/>,
       }}
+      footer={<Footer/>}
       menu_item={[
         {
           key: "1",

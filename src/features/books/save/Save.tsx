@@ -22,7 +22,7 @@ export const Save: FC = () => {
     <>
       <button onClick={showDrawer} className="flex items-center p-[10px]">
         <Badge size={"small"} count={dataSaveBooks.length}>
-          <BiBookmark className="text-[24px]" />
+          <BiBookmark  className="text-[24px] hover:text-[#1890ff] " />
         </Badge>
       </button>
       <SharedDrawer

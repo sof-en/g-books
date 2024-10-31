@@ -2,8 +2,10 @@ import { FC } from "react";
 import { Carousel } from "antd";
 import scss from "./banner.module.scss"; // Подключение стилей
 import { SharedButton } from "../../shared/ui";
+import { useNavigate } from "react-router-dom";
 
 export const BannerSlide: FC = () => {
+  const navigate = useNavigate()
   const banners = [
     {
       id: 1,
@@ -39,7 +41,7 @@ export const BannerSlide: FC = () => {
               <h2>{banner.title}</h2>
               <p>{banner.description}</p>
             </div>
-            <SharedButton className={scss.btn}  type={"submit"}>
+            <SharedButton onClick={()=>navigate("/search")} className={scss.btn}  type={"submit"}>
               Исселовать
             </SharedButton>
           </div>

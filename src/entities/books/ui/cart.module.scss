@@ -1,6 +1,12 @@
 .content {
   position: relative;
-
+  box-shadow: 1px 1px 8px rgb(158, 155, 155);
+  height: 450px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(45deg, rgba(32, 94, 182, 0.1), rgba(28, 85, 131, 0.1));
   // Контейнер с иконками скрыт по умолчанию
   .iconContainer {
     opacity: 0;
@@ -15,7 +21,7 @@
     color: white;
   }
   &:hover {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(45deg, rgba(95, 94, 94, 0.1), rgba(74, 74, 74, 0.1));
   }
 
   // Стиль для фона иконок

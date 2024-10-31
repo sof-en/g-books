@@ -7,9 +7,9 @@ export const LayoutHeader: FC = () => {
   return (
     <div className={scss.layout_header}>
       <Logo />
-      <Search />
       <div className={scss.layout_header_right}>
-        <Save/>
+        <Search />
+        <Save />
         <Language />
       </div>
     </div>
