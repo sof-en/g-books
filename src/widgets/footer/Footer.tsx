@@ -12,7 +12,7 @@ const { Text } = Typography;
 
 export const Footer: FC = () => {
   return (
-    <div className="flex  w-full justify-around items-start   p-[30px] bg-[#0a0a0a]  ">
+    <div className="flex  w-full justify-evenly items-start flex-wrap  p-[30px] bg-[#0a0a0a]  ">
       <Logo />
       <div className="flex items-start flex-col gap-[10px]">
         <Text className="text-sm mt-2 text-white ">© 2024. All rights reserved.</Text>

@@ -13,6 +13,9 @@ export const SavedBooksSlice = createSlice({
     saveResultSearch: (state, action: PayloadAction<ResultData[]>) => {
       state.resultSearchData = action.payload;
     },
+    clearResultSearch: (state) => {
+      state.resultSearchData = [];
+    },
   },
 });
 export const saveBooksActions = SavedBooksSlice.actions;

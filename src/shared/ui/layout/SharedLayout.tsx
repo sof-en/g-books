@@ -26,14 +26,14 @@ export const SharedLayout: React.FC<Props> = React.memo(({ content, header, sear
   return (
     <div className="bg-green w-full mx-auto px-[0px]">
       {/* Header */}
-      <div className="sticky top-0 w-[full] z-50 bg-green py-[20px]">
+      <div className="sticky top-0 w-[full] z-50 bg-green py-[20px] px-[10px]">
         <div className="lg:w-[80%] md:w-[90%] sm:w-[95%] mx-auto rounded-[5px] px-[30px] py-[20px] bg-whiteGray flex justify-between">
           {header}
         </div>
       </div>
 
       {/* Content */}
-      <div className="lg:w-[80%] md:w-[90%] sm:w-[95%] mx-auto">
+      <div className="lg:w-[80%] md:w-[90%] sm:w-[95%] mx-auto px-[10px]">
         {content?.slide_banner}
         {content?.top_books}
         {content?.sound_books}
@@ -41,7 +41,7 @@ export const SharedLayout: React.FC<Props> = React.memo(({ content, header, sear
       </div>
 
       {/* SearchContent */}
-      <div className="lg:w-[80%] md:w-[90%] sm:w-[95%] mx-auto">
+      <div className="lg:w-[80%] md:w-[90%] sm:w-[95%] mx-auto px-[10px]">
         {search_content}
       </div>
 

@@ -15,7 +15,7 @@ export const Search: FC = () => {
   const navigate = useNavigate();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  
   const showModal = () => {
     setIsModalOpen(true);
   };

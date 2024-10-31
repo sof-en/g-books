@@ -3,11 +3,11 @@ import { Skeleton } from "antd"; // Используем Skeleton из Ant Desig
 
 export const SharedCartSkeleton: FC = () => {
   return (
-    <div className="flex items-center  gap-3">
+    <div className="flex items-center overflow-auto    gap-3">
       {Array.from({ length: 3 }).map((_, index) => (
         <div
           key={index}
-          className="w-[100%] flex flex-col gap-3 bg-whiteGray rounded-[10px] p-[10px]"
+          className="w-[100%]  flex flex-col gap-3 bg-whiteGray rounded-[10px] p-[10px]"
         >
           <Skeleton.Image
             active={true}
