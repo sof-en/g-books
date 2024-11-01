@@ -24,6 +24,8 @@ export const Search: FC = () => {
     setIsModalOpen(false);
   };
 
+  
+
   const sanitizeInput = (input: string) => {
     return input.replace(/[\s\W_]+/g, "");
   };

@@ -25,9 +25,11 @@ export const SaveBtn: FC<{ className?: string; book: ResultData }> = ({
     }
   };
   return (
-    <button onClick={handleClick} className={className} title="save">
+    <>
       {contextHolder}
-      {isBookFavorited ? <BsFillBookmarkFill /> : <BiBookmark />}
-    </button>
+      <button onClick={handleClick} className={className} title="save">
+        {isBookFavorited ? <BsFillBookmarkFill /> : <BiBookmark />}
+      </button>
+    </>
   );
 };
